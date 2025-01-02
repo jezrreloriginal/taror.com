@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Consulta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agendar Consulta</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Calendário</h2>
+            <div id="calendar"></div>
+            <div id="timeSlots" class="hidden">
+                <h3>Horários Disponíveis</h3>
+                <div id="timeOptions"></div>
+            </div>
+        </section>
+        <section>
+            <h2>Confirmar Agendamento</h2>
+            <form id="appointmentForm">
+                <label for="selectedDate">Data:</label>
+                <input type="text" id="selectedDate" name="selectedDate" readonly required>
+
+                <label for="selectedTime">Horário:</label>
+                <input type="text" id="selectedTime" name="selectedTime" readonly required>
+
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Celular:</label>
+                <input type="text" id="phone" name="phone" required>
+
+                <button type="submit">Confirmar Agendamento</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cartomante Sensitiva</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
