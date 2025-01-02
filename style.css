@@ -1,0 +1,139 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background: #4b0082;
+    color: #fff;
+    padding: 20px 10px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}
+
+/* Calendário */
+#calendar, #adminCalendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+#calendar .day, #adminCalendar {
+    background: #e9ecef;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+#calendar .day.active, #adminCalendar {
+    background: #4b0082;
+    color: #fff;
+    font-weight: bold;
+}
+
+#calendar .day.fully-booked, #adminCalendar {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#calendar .day:hover, #adminCalendar {
+    background: #5e35b1;
+    color: #fff;
+}
+
+#calendar .empty {
+    visibility: hidden;
+}
+
+/* Time slots */
+#timeSlots {
+    margin-top: 20px;
+}
+
+#timeSlots button {
+    padding: 10px 15px;
+    margin: 5px;
+    background: #4b0082;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+#timeSlots button.disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+#timeSlots button:hover:not(.disabled) {
+    background: #5e35b1;
+}
+
+/* Formulário */
+form {
+    margin-top: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 15px;
+    background: #4b0082;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+form button:hover {
+    background: #5e35b1;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #4b0082;
+    color: #fff;
+    margin-top: 20px;
+}
