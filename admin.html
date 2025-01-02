@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administração</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Administração - Configurar Agenda</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Calendário</h2>
+            <div id="adminCalendar"></div>
+        </section>
+        <section id="daySettings" class="hidden">
+            <h3>Gerenciar Data</h3>
+            <p id="selectedDate"></p>
+            <button id="activateDate" class="hidden">Ativar Data</button>
+            <div id="timeManagement" class="hidden">
+                <h4>Gerenciar Horários</h4>
+                <button id="addDefaultTimes">Adicionar Horários Padrão</button>
+                <div>
+                    <input type="time" id="customTimeInput">
+                    <button id="addCustomTime">Adicionar Horário Personalizado</button>
+                </div>
+                <ul id="timeList"></ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Cartomante Sensitiva</p>
+    </footer>
+    <script src="admin.js"></script>
+</body>
+</html>
