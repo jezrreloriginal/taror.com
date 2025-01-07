@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Função para carregar os dias ativos
     const loadActiveDays = async () => {
-        // Testar com localStorage se o backend não estiver pronto
+        // Testar com localStorage se o backend n estiver pronto
         const storedDays = localStorage.getItem('activeDays');
         activeDays = storedDays ? JSON.parse(storedDays) : [];
         renderCalendar();
