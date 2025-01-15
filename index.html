@@ -105,7 +105,7 @@
 
         /* Círculo sobre o cabeçalho */
         .circle {
-            position: absolute; /* Tornar o círculo flutuante sobre o cabeçalho */
+            position: fixed; /* Tornar o círculo flutuante sobre o cabeçalho */
             top: 30px; /* Ajuste para que o círculo fique um pouco abaixo da borda superior */
             left: 20px;
             width: 80px;
@@ -382,6 +382,42 @@
    h2:hover{
     transform: scale(1.05);
 }
+
+input, textarea{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    border: none;
+    background-color: #072911;
+    color: #d4b61b;
+    margin: 5px;
+    padding: 10px;
+    
+}
+
+#btnform{
+
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 90%;
+    height: 90%;
+    border-radius: 15px;
+    border: none;
+    background-color: #072911;
+    color: #d4b61b;
+    margin: 5px;
+    padding: 10px;
+
+}
+
+#form{
+    
+height: 330px;
+    background-color: #ffffff56;
+    border-radius: 30px;
+}
     </style>
 </head>
 
@@ -424,39 +460,73 @@
 
 
    
-    <script>
+    <script>                
         // Função para alternar a exibição do significado ao clicar no card
         function toggleMeaning(card) {
             card.classList.toggle("active");
         }
     </script>
 
-</body>
-</html>
+
 
 
     <!-- Seção Sobre -->
-    <div class="container" id="sobre">
-        <h2>Sobre Nós</h2>
-        <p>Bem-vindo ao Carolinatarot 03! Explore a sabedoria do tarot e agende uma consulta para descobrir os segredos que o universo tem para você.</p>
-    </div>
+     <fieldset >
+<div class="container" id="sobre" style="background-color: #c7750b3d;">
+    <h2 style="font-family: 'Dancing Script', cursive; color: #b42121; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); font-size: 50px;">Sobre Nós</h2>
+    <p style="font-family: 'Dancing Script', cursive; font-size: 25px; color: rgb(252, 235, 2); line-height: 1.8; text-align: justify;">
+        Bem-vindo ao Carolina Tarot 03! O tarot é uma arte mística, antiga e profunda que conecta você aos mistérios do universo.
+        <br><br>
+        Ao consultar as cartas, você entra em sintonia com energias poderosas que revelam caminhos, opções e insights sobre a sua jornada de vida. A cada carta que vira, o futuro se desvela diante de seus olhos, trazendo respostas e clareza para questões do coração, da mente e do destino.
+        <br><br>
+        Se você busca orientação, autoconhecimento ou respostas para suas dúvidas mais profundas, nosso espaço é o lugar ideal. Nossos leitores experientes irão guiá-lo(a) por meio de uma leitura de cartas única, revelando as energias que influenciam a sua vida.
+    </p>
+    </fieldset>
+</div>
 
-    <!-- Seção Contato -->
-    <div class="container contact" id="contato">
-        <h2>Contato</h2>
-        <a href="https://instagram.com/carolinetarot03" target="_blank">Instagram</a>
-        <a href="https://wa.me/5599999999999" target="_blank">WhatsApp</a>
-        <a href="mailto:carolinetarot03@example.com" target="_blank">Email</a>
+  <section id="contato">
+
+<!-- Seção Contato -->
+<div class="container contact" id="contato">
+    <h2 style="font-family: cursive;">Instagram</h2>
+    <div class="iframely-embed">
+        <div class="iframely-responsive" style="height: 140px; padding-bottom: 0;">
+            <a href="https://www.instagram.com/carolinatarot03/" data-iframely-url="//iframely.net/M0Z7Evm"></a>
+        </div>
     </div>
+    <script async src="//iframely.net/embed.js"></script>
+
+<br>
+<h2 style="font-family:cursive;">Entre em contato pelo wattssap</h2>
+
+
+<br>
+<div id="form">
+  <form action="#" method="get" onsubmit="abrirWhatsapp()">
+    <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
+    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
+    <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+    <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
+    <button type="submit" id="btnform">
+      <img src="https://matheuscostadesign.github.io/enviar-para-whatsapp/assets/whatsapp.svg" alt="Icone Whatsapp">
+      <span>Enviar  para o Whatsapp</span>
+    </button>
+  </form>
+</div>
+
+
+  </section>
+
+
+
 
     <div class="container" id="agendamento">
-        <h2>Agende Sua Consulta</h2>
+        <h2 style="font-family: cursive;">Agende Sua Consulta</h2>
         
       
-</head>
-<body>
 
-    <h1>Agende Sua Consulta</h1>
+
+  
 
     <!-- Botão para abrir o Google Calendar -->
     <button class="agendamento-button" id="openCalendarBtn">Agendar um compromisso</button>
