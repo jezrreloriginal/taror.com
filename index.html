@@ -200,7 +200,12 @@
        
       
     
-
+        * Responsividade para telas entre 1px e 600px */
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+  }
+}
     </style>
 
 
@@ -214,6 +219,12 @@
        
         </video>
     </div>
+
+
+    <div class="top-left-option">
+        <a href="#inicio">Home</a>
+    </div>
+
 
     <div class="circle">
         <img src="perfil.jpg" alt="Imagem do perfil">
@@ -418,6 +429,13 @@ height: 330px;
     background-color: #ffffff56;
     border-radius: 30px;
 }
+
+* Responsividade para telas entre 1px e 600px */
+@media (max-width: 600px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
+  }
+}
     </style>
 </head>
 
@@ -552,7 +570,59 @@ height: 330px;
     </footer>
 
 
-    
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolinetarot03</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+        /* Menu de idiomas no canto superior direito */
+        .language-menu {
+          
+            position: absolute;
+            top: 35px;
+            right: 0px;
+            z-index: 10;
+            background-color: rgb(141, 9, 9);
+            padding: 5px 10px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Menu de idiomas -->
+    <div class="language-menu">
+        <div id="google_translate_element"></div>
+    </div>
+
+   
+
+    <script type="text/javascript">
+        // Função para carregar o Google Translate widget
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'en,es,pt', // Idiomas permitidos
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        // Script do Google Translate
+        (function() {
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.head.appendChild(script);
+        })();
+    </script>
+</body>
+</html>
+
 
 </body>
 </html>
