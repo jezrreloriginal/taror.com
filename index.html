@@ -197,8 +197,66 @@
             50% { opacity: 1; }
             100% { opacity: 0; }
         }
+       
+      
+    /* O modal */
+    .modal {
+        display: none; /* Inicialmente escondido */
+        position: fixed;
+        z-index: 1; /* Fica sobre o conteúdo */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto; /* Se necessário, permite rolar */
+        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    }
 
+    /* O conteúdo do modal */
+    .modal-content {
+        background-color: #fff;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 99%; /* Ajusta a largura */
+        max-width: 800px; /* Limita a largura máxima */
+        border-radius: 10px;
+        height: 70%; /* Aumenta a altura do modal */
+        overflow-y: auto; /* Adiciona rolagem caso o conteúdo seja maior */
+    }
+
+    /* O botão de fechar (x) */
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .agendamento-button {
+            background-color: #0B8043;
+            color: white;
+            border: 3px solid #0B8043;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .agendamento-button:hover {
+            box-shadow: 0 0 20px 5px rgba(11, 128, 67, 0.6);
+        }
     </style>
+
+
+
 </head>
 <body>
     <!-- Vídeo como fundo desfocado -->
@@ -253,35 +311,40 @@
         <a href="mailto:carolinetarot03@example.com" target="_blank">Email</a>
     </div>
 
-    <!-- Seção Agendamento -->
     <div class="container" id="agendamento">
         <h2>Agende Sua Consulta</h2>
         
-            
-        <!-- Google Calendar Appointment Scheduling begin -->
-        <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-        <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-        <script>
-        (function() {
-          var target = document.currentScript;
-          window.addEventListener('load', function() {
-            calendar.schedulingButton.load({
-              url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2tNBWM8cPvqmrZY85giUxBJtnBitKOmT5E1ZaynMfNViJftZdA62pcmOXLkahw1zINirR76Hpw?gv=true',
-              color: '#0B8043',
-              label: 'Agendar um compromisso',
-              target,
-            });
-          });
-        })();
-        </script>
-        <!-- end Google Calendar Appointment Scheduling -->
-        
-       
-        
-    </div>
+      
+</head>
+<body>
+
+    <h1>Agende Sua Consulta</h1>
+
+    <!-- Botão para abrir o Google Calendar -->
+    <button class="agendamento-button" id="openCalendarBtn">Agendar um compromisso</button>
+
+    <script>
+        // Definir a URL do agendamento no Google Calendar
+        var calendarUrl = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ2tNBWM8cPvqmrZY85giUxBJtnBitKOmT5E1ZaynMfNViJftZdA62pcmOXLkahw1zINirR76Hpw?gv=true';
+
+        // Obter o botão de agendamento
+        var btn = document.getElementById("openCalendarBtn");
+
+        // Quando o botão for clicado, abrir a página do Google Calendar em uma nova aba
+        btn.onclick = function() {
+            window.open(calendarUrl, '_blank'); // Abre a URL em uma nova aba
+        };
+    </script>
+      
+</div>
+
 
     <footer>
         <p>&copy; 2025 Carolinetarot03. Todos os direitos reservados.</p>
     </footer>
+
+
+    
+
 </body>
 </html>
