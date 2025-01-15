@@ -200,12 +200,6 @@
        
       
     
-        * Responsividade para telas entre 1px e 600px */
-@media (max-width: 600px) {
-  .card-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
-  }
-}
     </style>
 
 
@@ -430,13 +424,27 @@ height: 330px;
     border-radius: 30px;
 }
 
-* Responsividade para telas entre 1px e 600px */
-@media (max-width: 600px) {
-  .card-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 cards por linha */
-  }
+
+
+
+@media (max-width: 430px) and (min-width: 100px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+        gap: 15px; /* Ajuste do espaçamento entre as colunas */
+    }
+
+    .card {
+        width: 100%; /* Faz os cards ocuparem toda a largura disponível */
+    }
 }
+
     </style>
+
+
+
+
+
 </head>
 
 
