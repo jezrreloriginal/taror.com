@@ -138,9 +138,9 @@
 
         /* Estilo do botão de agendamento */
         .agendamento-button {
-            background-color: #0B8043;
-            color: white;
-            border: 3px solid #0B8043;
+            background-color: #067928;
+            color: rgba(139, 15, 15, 0.74);
+           border: none;
             border-radius: 5px;
             padding: 10px 20px;
             cursor: pointer;
@@ -160,7 +160,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 3px solid #0B8043;
+            border: 3px solid #ffffff;
             border-radius: 5px;
             animation: border-animation 2s infinite linear;
         }
@@ -168,15 +168,15 @@
         @keyframes border-animation {
             0% {
                 transform: scale(1);
-                border-color: #0B8043;
+                border-color: rgba(128, 0, 0, 0.8);
             }
             50% {
                 transform: scale(1.1);
-                border-color: #4CAF50;
+                border-color: rgba(128, 0, 0, 0.8);
             }
             100% {
                 transform: scale(1);
-                border-color: #0B8043;
+                border-color:rgba(128, 0, 0, 0.8);
             }
         }
 
@@ -188,7 +188,7 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 18px;
-            color: #ffd700;
+            color: #f8e807;
             animation: sparkle 0.5s ease-in-out infinite;
         }
 
@@ -199,60 +199,8 @@
         }
        
       
-    /* O modal */
-    .modal {
-        display: none; /* Inicialmente escondido */
-        position: fixed;
-        z-index: 1; /* Fica sobre o conteúdo */
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto; /* Se necessário, permite rolar */
-        background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    }
+    
 
-    /* O conteúdo do modal */
-    .modal-content {
-        background-color: #fff;
-        margin: 5% auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 99%; /* Ajusta a largura */
-        max-width: 800px; /* Limita a largura máxima */
-        border-radius: 10px;
-        height: 70%; /* Aumenta a altura do modal */
-        overflow-y: auto; /* Adiciona rolagem caso o conteúdo seja maior */
-    }
-
-    /* O botão de fechar (x) */
-    .close {
-        color: #aaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-        color: black;
-        text-decoration: none;
-        cursor: pointer;
-    }
-
-    .agendamento-button {
-            background-color: #0B8043;
-            color: white;
-            border: 3px solid #0B8043;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .agendamento-button:hover {
-            box-shadow: 0 0 20px 5px rgba(11, 128, 67, 0.6);
-        }
     </style>
 
 
@@ -263,16 +211,16 @@
     <div class="body-video">
         <video autoplay muted loop>
             <source src="https://www.shutterstock.com/shutterstock/videos/1107219471/preview/stock-footage-stockholm-sweden-june-mysterious.mp4" type="video/mp4">
-            Seu navegador não suporta o elemento de vídeo.
+       
         </video>
     </div>
 
     <div class="circle">
-        <img src="https://via.placeholder.com/80" alt="Imagem do perfil">
+        <img src="perfil.jpg" alt="Imagem do perfil">
     </div>
 
     <header id="inicio">
-        <h1>Bem-vindo ao Carolinetarot03</h1>
+        <h1 style="font-size: 70px; color: #b42121;"   > <span style="color: #b42121;">Bem-vindo ao</span> <br> Carolina Tarot03</h1>
     </header>
 
     <nav>
@@ -282,25 +230,218 @@
         <a href="#agendamento">Agendamento</a>
     </nav>
 
+   <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carolinetarot03</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); /* Fonte manuscrita */
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f3ee;
+            color: #333;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            padding-top: 100px; /* Ajusta o conteúdo para não se sobrepor ao cabeçalho fixo */
+        }
+
+        header {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            padding: 100px 20px;
+            z-index: 2;
+            font-family: 'Dancing Script', cursive; /* Fonte manuscrita */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona sombra para destacar o cabeçalho */
+            overflow: hidden; /* Impede que as estrelas saiam do cabeçalho */
+        }
+
+        /* Vídeo como fundo desfocado */
+        .body-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .body-video video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: blur(8px) brightness(0.5);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: rgba(128, 0, 0, 0.8);
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 3; /* Garante que a navegação fique sempre sobre os outros conteúdos */
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+       /* Cards de Gifs */
+       .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            width: 200px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .card:hover {
+            transform: scale(1.05); /* Animação de aumento no hover */
+        }
+
+        /* Texto de resumo invisível por padrão */
+        .card .meaning {
+            display: none;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        /* Exibe o texto ao clicar no card */
+        .card.active .meaning {
+            display: block;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        footer {
+            background-color: rgba(128, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        
+        h2{
+            color: #067928;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            translate: 3s;
+        }
+
+   h2:hover{
+    transform: scale(1.05);
+}
+    </style>
+</head>
+
+
     <!-- Seção Início com 7 cards -->
     <div class="container" id="inicio">
-        <h2>Início</h2>
+        <h2   "> Clique nas Cartas Para saber o Significado</h2>
         <div class="cards">
             <!-- Adicione 7 cards com gifs -->
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 1"></div>
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 2"></div>
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 3"></div>
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 4"></div>
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 5"></div>
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 6"></div>
-            <div class="card"><img src="https://via.placeholder.com/200x150" alt="Gif 7"></div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="1.gif" alt="Gif 1">
+                <div class="meaning">Significado do Gif 1: Descrição do que o gif representa.</div>
+            </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="2.gif" alt="Gif 2">
+                <div class="meaning">Significado do Gif 2: Descrição do que o gif representa.</div>
+            </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="3.gif" alt="Gif 3">
+                <div class="meaning">Significado do Gif 3: Descrição do que o gif representa.</div>
+            </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="4.gif" alt="Gif 4">
+                <div class="meaning">Significado do Gif 4: Descrição do que o gif representa.</div>
+            </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="5.gif" alt="Gif 5">
+                <div class="meaning">Significado do Gif 5: Descrição do que o gif representa.</div>
+            </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="6.gif" alt="Gif 6">
+                <div class="meaning">Significado do Gif 6: Descrição do que o gif representa.</div>
+            </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="7.gif" alt="Gif 7">
+                <div class="meaning">Significado do Gif 7: Descrição do que o gif representa.</div>
+            </div>
         </div>
     </div>
+
+
+    <footer>
+        <p>&copy; 2025 Carolina Tarot03. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Função para alternar a exibição do significado ao clicar no card
+        function toggleMeaning(card) {
+            card.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
+
 
     <!-- Seção Sobre -->
     <div class="container" id="sobre">
         <h2>Sobre Nós</h2>
-        <p>Bem-vindo ao Carolinetarot03! Explore a sabedoria do tarot e agende uma consulta para descobrir os segredos que o universo tem para você.</p>
+        <p>Bem-vindo ao Carolinatarot 03! Explore a sabedoria do tarot e agende uma consulta para descobrir os segredos que o universo tem para você.</p>
     </div>
 
     <!-- Seção Contato -->
