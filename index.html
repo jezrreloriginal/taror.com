@@ -19,6 +19,9 @@
             padding-top: 100px; /* Ajusta o conteúdo para não se sobrepor ao cabeçalho fixo */
         }
 
+
+        
+
         header {
             position: relative;
             text-align: center;
@@ -54,7 +57,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: rgba(128, 0, 0, 0.8);
+            background-color: rgb(68, 4, 4);
             padding: 10px;
             position: fixed;
             top: 0;
@@ -137,7 +140,7 @@
         }
 
         /* Estilo do botão de agendamento */
-        .agendamento-button {
+        .agendamento-button, #wat {
             background-color: #067928;
             color: rgba(139, 15, 15, 0.74);
            border: none;
@@ -148,7 +151,7 @@
             overflow: hidden;
         }
 
-        .agendamento-button:hover {
+        .agendamento-button:hover, #wat {
             box-shadow: 0 0 20px 5px rgba(11, 128, 67, 0.6);
         }
 
@@ -199,7 +202,18 @@
         }
        
       
-    
+        .gif-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Força 3 GIFs por linha */
+        gap: 10px;
+    }
+    .gif-gallery img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
     </style>
 
 
@@ -292,7 +306,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: rgba(128, 0, 0, 0.8);
+            background-color: rgb(128, 0, 0);
             padding: 10px;
             position: fixed;
             top: 0;
@@ -349,7 +363,7 @@
             bottom: 10px;
             left: 10px;
             right: 10px;
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgb(0, 0, 0);
             color: #fff;
             padding: 10px;
             border-radius: 5px;
@@ -419,69 +433,60 @@ input, textarea{
 
 #form{
     
-height: 330px;
+height: auto;
     background-color: #ffffff56;
     border-radius: 30px;
 }
 
 
-
-
-@media (max-width: 430px) and (min-width: 100px) {
-    .cards {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Duas colunas */
-        gap: 15px; /* Ajuste do espaçamento entre as colunas */
-    }
-
-    .card {
-        width: 100%; /* Faz os cards ocuparem toda a largura disponível */
-    }
-}
-
     </style>
-
-
-
-
-
 </head>
 
 
     <!-- Seção Início com 7 cards -->
     <div class="container" id="inicio">
         <h2   "> Clique nas Cartas Para saber o Significado</h2>
-        <div class="cards">
+        <div class="gif-gallery">
             <!-- Adicione 7 cards com gifs -->
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="1.gif" alt="Gif 1">
-                <div class="meaning">Significado do Gif 1: Descrição do que o gif representa.</div>
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> Os Enamorados :</span> tem a ver com uma importante decisão que deve ser tomada. </div>
             </div>
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="2.gif" alt="Gif 2">
-                <div class="meaning">Significado do Gif 2: Descrição do que o gif representa.</div>
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> A Imperatriz: </span>  aparece em uma consulta, geralmente indica que as coisas vão bem na situação questionada, como se cada coisa estivesse em seu devido lugar, exatamente como desejado..</div>
             </div>
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="3.gif" alt="Gif 3">
-                <div class="meaning">Significado do Gif 3: Descrição do que o gif representa.</div>
+                <div class="meaning"> <span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> O Papa :</span>aparece em uma consulta, as respostas remetem à busca de conselhos sábios.</div>
             </div>
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="4.gif" alt="Gif 4">
-                <div class="meaning">Significado do Gif 4: Descrição do que o gif representa.</div>
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> O Sol :</span>significa que boas energias estão em jogo. Quando esse Arcano Maior aparece na leitura, traz todo seu brilho para o momento.</div>
             </div>
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="5.gif" alt="Gif 5">
-                <div class="meaning">Significado do Gif 5: Descrição do que o gif representa.</div>
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> Dois de Copas</span>  significa harmonia nos relacionamentos. Sugere que uma parceria tende a ser altamente proveitosa, seja no amor, negócios ou trabalho.</div>
             </div>
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="6.gif" alt="Gif 6">
-                <div class="meaning">Significado do Gif 6: Descrição do que o gif representa.</div>
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> 10 de Copas </span> significa momentos felizes. Se seu coração deseja algo, sugere que você deve conseguir em breve. A carta também indica o fim de um ciclo, ou seja, você pode finalmente conquistar ou ter conquistado algo, resoluções na questão atual, um amor ou ter dado o próximo passo em seu relacionamento. </div>
             </div>
+           
             <div class="card" onclick="toggleMeaning(this)">
                 <img src="7.gif" alt="Gif 7">
-                <div class="meaning">Significado do Gif 7: Descrição do que o gif representa.</div>
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> O cavaleiro de Paus </span>  significa energias renovadas. Um novo e inesperado caminho pode se abrir e a carta sugere que você pode querer entrar nele de cabeça. </div>
+            </div>       
+                
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="8.gif" alt="Gif 8">
+                <div class="meaning"> <span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> o Mundo: </span> significa que a situação em questão terá um desfecho. Esse Arcano Maior anuncia um novo começo e indica que a mudança é inevitável. As mudanças que ocorrem ou ocorrerão tendem a ser positivas, sugerindo resposta positiva. Simboliza que algo em sua vida ou relacionado à questão perguntada chegará a uma conclusão.</div>
             </div>
-        </div>
+            <div class="card" onclick="toggleMeaning(this)">
+                <img src="9.gif" alt="Gif 9">
+                <div class="meaning"><span style="font-family: cursive; color: rgb(255, 255, 255); font-weight: 900;"> A Estrela: </span> tem um significado extremamente positivo em uma consulta. Quando aparece, indica um momento em que as coisas começam a dar certo.  </div>
+            </div>
+       </div>
     </div>
 
 
@@ -498,9 +503,9 @@ height: 330px;
 
     <!-- Seção Sobre -->
      <fieldset >
-<div class="container" id="sobre" style="background-color: #c7750b3d;">
+<div class="container" id="sobre" style="background-color: #c7750b;">
     <h2 style="font-family: 'Dancing Script', cursive; color: #b42121; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); font-size: 50px;">Sobre Nós</h2>
-    <p style="font-family: 'Dancing Script', cursive; font-size: 25px; color: rgb(252, 235, 2); line-height: 1.8; text-align: justify;">
+    <p style="font-family: 'Dancing Script', cursive; font-size: 40px; color: rgb(167, 24, 24); line-height: 1.8; text-align: justify;">
         Bem-vindo ao Carolina Tarot 03! O tarot é uma arte mística, antiga e profunda que conecta você aos mistérios do universo.
         <br><br>
         Ao consultar as cartas, você entra em sintonia com energias poderosas que revelam caminhos, opções e insights sobre a sua jornada de vida. A cada carta que vira, o futuro se desvela diante de seus olhos, trazendo respostas e clareza para questões do coração, da mente e do destino.
@@ -528,16 +533,30 @@ height: 330px;
 
 <br>
 <div id="form">
-  <form action="#" method="get" onsubmit="abrirWhatsapp()">
-    <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
-    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
-    <input type="email" name="email" id="email" placeholder="E-mail" required><br>
-    <textarea name="msg" id="msg" placeholder="Mensagem" cols="30" rows="5" required></textarea><br>
-    <button type="submit" id="btnform">
-      <img src="https://matheuscostadesign.github.io/enviar-para-whatsapp/assets/whatsapp.svg" alt="Icone Whatsapp">
-      <span>Enviar  para o Whatsapp</span>
-    </button>
-  </form>
+    <div class="container">
+        <h1>Formulário</h1>
+        <form id="whatsappForm">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="button" onclick="sendToWhatsApp()" id="wat">Enviar</button>
+            </div>
+        </form>
+  </div>
 </div>
 
 
@@ -546,9 +565,15 @@ height: 330px;
 
 
 
+
+
+<div class="per" style="background-color: #067928;">
     <div class="container" id="agendamento">
         <h2 style="font-family: cursive;">Agende Sua Consulta</h2>
-        
+
+
+
+       
       
 
 
@@ -556,6 +581,8 @@ height: 330px;
 
     <!-- Botão para abrir o Google Calendar -->
     <button class="agendamento-button" id="openCalendarBtn">Agendar um compromisso</button>
+
+ </div>   
 
     <script>
         // Definir a URL do agendamento no Google Calendar
@@ -573,64 +600,76 @@ height: 330px;
 </div>
 
 
+
+
+
     <footer>
-        <p>&copy; 2025 Carolinetarot03. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Carolinatarot03. Todos os direitos reservados.</p>
     </footer>
 
 
     <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carolinetarot03</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carolinetarot03</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+    
+            /* Menu de idiomas no canto superior direito */
+            .language-menu {
+              
+                position: absolute;
+                top: 35px;
+                right: 0px;
+                z-index: 10;
+                background-color: rgb(141, 9, 9);
+                padding: 5px 10px;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Menu de idiomas -->
+        <div class="language-menu">
+            <div id="google_translate_element"></div>
+        </div>
+    
+       
+    
+        <script type="text/javascript">
+            // Função para carregar o Google Translate widget
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'pt',
+                    includedLanguages: 'en,es,pt', // Idiomas permitidos
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+    
+            // Script do Google Translate
+            (function() {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.async = true;
+                script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+                document.head.appendChild(script);
+            })();
+        </script>
+    <script>
+          function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const message = document.getElementById('message').value;
 
-        /* Menu de idiomas no canto superior direito */
-        .language-menu {
-          
-            position: absolute;
-            top: 35px;
-            right: 0px;
-            z-index: 10;
-            background-color: rgb(141, 9, 9);
-            padding: 5px 10px;
-            border-radius: 15px;
+            const whatsappMessage = `*Nome:* ${name}\n*Email:* ${email}\n*Telefone:* ${phone}\n*Mensagem:* ${message}`;
+            const whatsappURL = `https://api.whatsapp.com/send?phone=SEU_NUMERO&text=${encodeURIComponent(whatsappMessage)}`;
+
+            window.open(whatsappURL, '_blank');
         }
-    </style>
-</head>
-<body>
-    <!-- Menu de idiomas -->
-    <div class="language-menu">
-        <div id="google_translate_element"></div>
-    </div>
-
-   
-
-    <script type="text/javascript">
-        // Função para carregar o Google Translate widget
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'pt',
-                includedLanguages: 'en,es,pt', // Idiomas permitidos
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-            }, 'google_translate_element');
-        }
-
-        // Script do Google Translate
-        (function() {
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.async = true;
-            script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-            document.head.appendChild(script);
-        })();
-    </script>
-</body>
-</html>
-
-
+      </script>
 </body>
 </html>
